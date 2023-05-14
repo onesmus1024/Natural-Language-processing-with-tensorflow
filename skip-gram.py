@@ -168,12 +168,12 @@ def skip_gram_data_generator(sequences, window_size, batch_size, negative_sample
     # If seed is not provided generate a random one
     if not seed:
         seed = random.randint(0, 10e6)
-    np.random.seed(seed)
-    np.random.shuffle(contexts)
-    np.random.seed(seed)
-    np.random.shuffle(targets)
-    np.random.seed(seed)
-    np.random.shuffle(labels)
+        np.random.seed(seed)
+        np.random.shuffle(contexts)
+        np.random.seed(seed)
+        np.random.shuffle(targets)
+        np.random.seed(seed)
+        np.random.shuffle(labels)
 
     for eg_id_start in range(0, contexts.shape[0], batch_size):
 
